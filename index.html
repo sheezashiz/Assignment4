@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><align><center>Table Generator:</center></align></h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+    <div id="table"></div>
+
+    <script>
+        function generateTable() {
+            var number = document.getElementById('numberInput').value;
+            var tableHTML = "<h2>Table of " + number + "</h2>";
+            for(var i = 1; i <= 10; i++) {
+                tableHTML += number + " x " + i + " = " + (number * i) + "<br>";
+            }
+            document.getElementById('table').innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>
